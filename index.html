@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Finding and Using Data</title>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/serif.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link')
+  link.rel = 'stylesheet'
+  link.type = 'text/css'
+  link.href = window.location.search.match( /print-pdf/gi ) ? '//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css' : '//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/paper.css'
+  document.getElementsByTagName( 'head' )[0].appendChild( link )
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section data-background="img/data.png" data-state="img-dim">
+        <h1 style='text-align: left;'>Finding and Using Data</h1>
+        <p style='text-align: left;'>Dr. Colin Carroll, Kensho</p>
+
+      </section>
+
+      <section>
+          <img src="img/data_science.jpg" style="width:'100%';">
+          <p><a href="https://hbr.org/">hbr.org</a>
+      </section>
+
+      <section>
+          <img src="img/open_nyc.png" style="width:'100%';">
+          <p><a href="http://iquantny.tumblr.com/post/144197004989/the-nypd-was-systematically-ticketing-legally">
+              iquantny.tumblr.com
+          </a>
+      </section>
+
+      <section data-background="img/looking.gif">
+        <h2 style="float: right; color: white;">Finding Data</h2>
+      </section>
+
+      <section>
+        <section>
+            <a href="https://cran.r-project.org/">
+                <img src='img/rlogo.svg' width=150 class="flat">
+            </a>
+          <pre><code>
+R> all.datasets <- data.frame(
+  data(package=.packages(all.available=T))[[3]]
+)
+
+R> all.datasets[,-2]
+      Item   Package                   Title
+      Nile  datasets  Flow of the River Nile
+    Orange  datasets  Growth of Orange Trees
+ txhousing   ggplot2     Housing sales in TX
+      acme      boot  Monthly Excess Returns
+Earthquake      nlme    Earthquake Intensity
+      Meat      nlme      Tenderness of meat
+          </code></pre>
+        </section>
+
+        <section data-background="img/beavers.jpg" data-state="img-med">
+          <ul>
+            <li>Body Temperature Series of Two Beavers</li>
+            <li>Snail Mortality Data</li>
+            <li>Urine Analysis Data</li>
+            <li>Yearly Numbers of Important Discoveries</li>
+            <li>Distances Between European Cities and Between US Cities</li>
+            <li>The World's Telephones</li>
+            <li>Student Admissions at UC Berkeley</li>
+            <li>Number of Flaws in Cloth</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <img src="img/kaggle.png" class="flat" width=350>
+        <h3><a href="https://www.kaggle.com/datasets">kaggle.com/datasets</a></h3>
+        <ul>
+          <li>Hillary Clinton's emails</li>
+          <li>World Development Indicators from the World Bank</li>
+          <li>San Francisco Salaries</li>
+          <li>World University Rankings</li>
+          <li>Ocean Ship Logbooks</li>
+        </ul>
+      </section>
+
+      <section data-background="img/boston.jpg" data-state="img-dim">
+        <h2>City of Boston</h2>
+        <h3><a href="https://data.cityofboston.gov/">data.cityofboston.gov</a></h3>
+        <ul>
+          <li>Approved Building Permits</li>
+          <li>Crime Incident Reports</li>
+          <li>Property Assessment 2014</li>
+          <li>Employee Earnings Reports 2014</li>
+          <li>Closed Pothole Cases</li>
+        </ul>
+      </section>
+
+      <section>
+          <a href="https://github.com/">
+              <img src="img/Github_Logo.png" class="flat" height=200>
+              <img src="img/Octocat.png" class="flat" height=200>
+          </a>
+      <h3><a href="https://github.com/fivethirtyeight/data">github.com/fivethirtyeight/data</a></h3>
+
+        <ul>
+          <li>Objects in Bob Ross paintings</li>
+          <li>Tattoos in the NBA</li>
+          <li>Popularity of the Oxford Comma</li>
+          <li>Age of members of Congress</li>
+          <li>Life expectancy of Avengers</li>
+          <li>Cursing in Quentin Tarantino Movies</li>
+        </ul>
+
+      </section>
+
+      <section data-background="img/excited.gif">
+        <h2 style='color: white; left: 0; position: absolute;'>Using Data!</h2>
+      </section>
+
+      <section>
+        <h2>Demo</h2>
+        <a href="http://nbviewer.jupyter.org/gist/ColCarroll/b7c2ed318d4a5b52d56c3af85b219e3e" target="_blank">Jupyter Notebook</a>
+      </section>
+
+      <section>
+        <h2>Enter the Hadleyverse</h2>
+        <a href="http://hadley.nz/">
+            <img src="img/hadley.jpg">
+        </a>
+      </section>
+
+      <section>
+        <h2>Demo</h2>
+        <a href="http://nbviewer.jupyter.org/gist/ColCarroll/41f602d2e07fa93255fe13dbe1c4dc8e" target="_blank">Jupyter Notebook</a>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+  <script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+  <script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    history: true,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js' },
+      { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js' },
+      { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true },
+      { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+  </script>
+</body>
+</html>
