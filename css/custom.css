@@ -1,3 +1,11 @@
+html.img-med .slide-background.present {
+  opacity: .6;
+  visibility: visible; }
+
+html.img-dim .slide-background.present {
+  opacity: .3;
+  visibility: visible; }
+
 .reveal section img {
   border: none;
   background: none;
